@@ -1,32 +1,5 @@
 % Plot Roofline and Measurements
 clear; clc; close all;
-
-%% Some usefull reference
-% Markus Deserno 'Linear and Logarithmic Interpolation', Note, March 2004.
-%
-% 1. Linear Inteporlation
-%
-% x2 - x    b
-% ------ = --- =  1/f - 1 
-% x - x1    a
-%
-% where the fractional division 'f 'is 
-%
-%  f := a / (a+b)
-%
-% so that 
-%
-% x = f*x2 + (1-f)*x1     (lin)
-%
-% .2 Logarithmic Inteporlation
-%
-% log(x2) - log(x)    b
-% ---------------- = --- =  1/f - 1 
-% log(x) - log(x1)    a
-%192,192,192
-% solving for x, we find the logarithmic interpolation formula
-%
-% x = x2^{f} + x1^{(1-f)}    (log)
  
 %% Color Panteon
 %     R     G     B      hex       name
@@ -56,45 +29,100 @@ set(0,'DefaultTextFontName','Times',...
 
 GFLOPsmax = 1236.88; % x10^9 FLOP/s
 
-x_FL_100_DRAM=[0.01,2,100];
+x_FL_100_DRAM=[0.01,2,1E4];
 y_FL_100_DRAM=[5.5,GFLOPsmax,GFLOPsmax];
 
-x_FL_100_L1=[0.01,9,100];
+x_FL_100_L1=[0.01,9,1E4];
 y_FL_100_L1=[1.5,GFLOPsmax,GFLOPsmax];
 
-x_FL_50=[4.5,100];
+x_FL_50=[1.0,1E4];
 y_FL_50=[GFLOPsmax/2,GFLOPsmax/2];
 
-x_FL_25=[2.2,100];
+x_FL_25=[0.51,1E4];
 y_FL_25=[GFLOPsmax/4,GFLOPsmax/4];
 
-x_FL_10=[0.87,100];
+x_FL_10=[0.21,1E4];
 y_FL_10=[GFLOPsmax/10,GFLOPsmax/10];
 
+GFlop = 1E9;
+GByte = 1E6;
+ms = 1E-3; % [1ms = 1/1000s]
+
 % Kernels Measurements
-x_kernel1=1;
-y_Kernel1=100;
 
-x_kernel2=2;
-y_Kernel2=200;
+% WENO5_x Operator
+T = 325.149*ms;
+Qw = 24.915;
+Qr = 65.502;
+W = 174532500000;
 
-x_kernel3=3;
-y_Kernel3=300;
+P = (W/T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W/Q;
 
-x_kernel4=1.5;
-y_Kernel4=150;
+x_kernel1=I;
+y_Kernel1=P;
 
-x_kernel5=2.5;
-y_Kernel5=250;
+% WENO5_y Operator
+T = 156.867*ms;
+Qw = 8.548;
+Qr = 8.942;
+W = 17514690000;
 
-x_kernel6=3.5;
-y_Kernel6=350;
+P = (W/T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W/Q;
 
-x_kernel7=4;
-y_Kernel7=400;
+x_kernel2=I;
+y_Kernel2=P;
 
-x_kernel8=5;
-y_Kernel8=500;
+% WENO5_z Operator
+T = 164.282*ms;
+Qw = 7.934;
+Qr = 8.190;
+W = 17042250000;
+
+P = (W/T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W/Q;
+
+x_kernel3=I;
+y_Kernel3=P;
+
+x_kernel4=1024;
+y_Kernel4=64;
+
+x_kernel5=1024;
+y_Kernel5=64;
+
+x_kernel6=1024;
+y_Kernel6=64;
+
+% Laplace Operator
+T = 2.448*ms;
+Qw = 65.174;
+Qr = 88.859;
+W = 111125000;
+
+P = (W/T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W/Q;
+
+x_kernel7=I;
+y_Kernel7=P;
+
+% Laplace Operator
+T = 3.974*ms;
+Qw = 40.712;
+Qr = 123.369;
+W = 149815296;
+
+P = (W/T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W/Q;
+
+x_kernel8=I;
+y_Kernel8=P;
 
 % Plot Figure
 fig=figure; fig.PaperUnits = 'inches'; fig.PaperPosition = [0 0 8 6];
@@ -109,39 +137,42 @@ loglog(x_kernel8,y_Kernel8,'*');
 loglog(x_FL_10,y_FL_10,'-r'); 
 loglog(x_FL_25,y_FL_25,'-r');
 loglog(x_FL_50,y_FL_50,'-r');
-loglog(x_FL_100_DRAM,y_FL_100_DRAM,'--k','Linewidth',1); 
-loglog(x_FL_100_L1,y_FL_100_L1,'-k'); hold off
-axis([0.1,100,10,2000]);
+loglog(x_FL_100_DRAM,y_FL_100_DRAM,'-k'); 
+loglog(x_FL_100_L1,y_FL_100_L1,'--k','Linewidth',1); hold off
+axis([0.15,1E4,30,2050]);
 legend({'WENO5 $i_x$','WENO5 $i_y$','WENO5 $i_z$','WENO7 $i_x$','WENO7 $i_y$','WENO7 $i_z$','Laplace','RK step'},'Location','Eastoutside','Interpreter','Latex');
 legend boxoff
 ylabel('GFLOP/s','Interpreter','Latex'); 
 xlabel('FLOPs/Byte','Interpreter','Latex');
-set(gca, 'XTick', [0.1,1,10,100]);
-grid on; grid minor;
+set(gca, 'TickLabelInterpreter','Latex');
+set(gca, 'XTick', [0.25,0.5,1,2,4,8,64,1024]);
+set(gca, 'XTickLabel',{'$\frac{1}{4}$','$\frac{1}{2}$','1','2','4','8','64','1024'}); 
+set(gca, 'YTick', [32,64,128,256,512,1024,2048]);
+grid on; %grid minor;
 axis square;
 
-% Create textbox
+% Create textbox 50%
 annotation(fig,'textbox',...
-    [0.57 0.47 0.05 0.06],...
-    'String',{'10%'},...
+    [0.62 0.65 0.05 0.06],...
+    'String',{'50%'},...
     'LineStyle','none',...
     'FontSize',14,...
     'FitBoxToText','off',...
     'BackgroundColor',[1 1 1]);
 
-% Create textbox
+% Create textbox 25%
 annotation(fig,'textbox',...
-    [0.57 0.59 0.05 0.06],...
+    [0.62 0.525 0.05 0.06],...
     'String',{'25%'},...
     'LineStyle','none',...
     'FontSize',14,...
     'FitBoxToText','off',...
     'BackgroundColor',[1 1 1]);
 
-% Create textbox
+% Create textbox 10%
 annotation(fig,'textbox',...
-    [0.57 0.68 0.05 0.06],...
-    'String',{'50%'},...
+    [0.62 0.37 0.05 0.06],...
+    'String',{'10%'},...
     'LineStyle','none',...
     'FontSize',14,...
     'FitBoxToText','off',...

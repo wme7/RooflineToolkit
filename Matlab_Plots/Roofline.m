@@ -51,58 +51,94 @@ ms = 1E-3; % [1ms = 1/1000s]
 % Kernels Measurements
 
 % WENO5_x Operator
-T = 325.149*ms;
-Qw = 24.915;
-Qr = 65.502;
-W = 174532500000;
+% [Newest Measurement, base/initial measurement]
+T = [3.4,   325.149]*ms;
+Qw= [117,   24.915];
+Qr= [25,    65.502];
+W = [6.5e8, 175e8];
 
-P = (W/T)/GFlop;
+P = (W./T)/GFlop;
 Q = (Qw+Qr)*GByte;
-I = W/Q;
+I = W./Q;
 
 x_kernel1=I;
 y_Kernel1=P;
 
 % WENO5_y Operator
-T = 156.867*ms;
-Qw = 8.548;
-Qr = 8.942;
-W = 17514690000;
+% [Newest Measurement, base/initial measurement]
+T = [3.0,   156.867]*ms;
+Qw= [121,   8.548];
+Qr= [24,    8.942];
+W = [6.5e8, 175e8];
 
-P = (W/T)/GFlop;
+P = (W./T)/GFlop;
 Q = (Qw+Qr)*GByte;
-I = W/Q;
+I = W./Q;
 
 x_kernel2=I;
 y_Kernel2=P;
 
 % WENO5_z Operator
-T = 164.282*ms;
-Qw = 7.934;
-Qr = 8.190;
-W = 17042250000;
+% [Newest Measurement, base/initial measurement]
+T = [3.2,   164.282]*ms;
+Qw= [115,   7.934];
+Qr= [25,    8.190];
+W = [6.5E8, 170e8];
 
-P = (W/T)/GFlop;
+P = (W./T)/GFlop;
 Q = (Qw+Qr)*GByte;
-I = W/Q;
+I = W./Q;
 
 x_kernel3=I;
 y_Kernel3=P;
 
-x_kernel4=1024;
-y_Kernel4=64;
+% WENO7_x Operator
+% [Newest Measurement, base/initial measurement]
+T = [7.5]*ms;
+Qw= [115];
+Qr= [35];
+W = [1.1E9];
 
-x_kernel5=1024;
-y_Kernel5=64;
+P = (W./T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W./Q;
 
-x_kernel6=1024;
-y_Kernel6=64;
+x_kernel4=I;
+y_Kernel4=P;
+
+% WENO7_y Operator
+% [Newest Measurement, base/initial measurement]
+T = [7.1]*ms;
+Qw= [115];
+Qr= [35];
+W = [1.1E9];
+
+P = (W./T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W./Q;
+
+x_kernel5=I;
+y_Kernel5=P;
+
+% WENO7_z Operator
+% [Newest Measurement, base/initial measurement]
+T = [7.0]*ms;
+Qw= [115];
+Qr= [35];
+W = [1.1E9];
+
+P = (W./T)/GFlop;
+Q = (Qw+Qr)*GByte;
+I = W./Q;
+
+x_kernel6=I;
+y_Kernel6=P;
 
 % Laplace Operator
-T = 2.448*ms;
-Qw = 65.174;
-Qr = 88.859;
-W = 111125000;
+T = [414,   2.45]*ms*ms;
+Qw= [48,    65.174];
+Qr= [85,    88.859];
+W = [4.7E7, 1.1E8];
 
 P = (W/T)/GFlop;
 Q = (Qw+Qr)*GByte;
@@ -111,11 +147,11 @@ I = W/Q;
 x_kernel7=I;
 y_Kernel7=P;
 
-% Laplace Operator
-T = 3.974*ms;
-Qw = 40.712;
-Qr = 123.369;
-W = 149815296;
+% Runge Kutta
+T = [139,   3.974]*ms*ms;
+Qw= [37,    37];
+Qr= [120,   120];
+W = [3.6E6, 1.5E8];
 
 P = (W/T)/GFlop;
 Q = (Qw+Qr)*GByte;
@@ -139,16 +175,16 @@ loglog(x_FL_25,y_FL_25,'-r');
 loglog(x_FL_50,y_FL_50,'-r');
 loglog(x_FL_100_DRAM,y_FL_100_DRAM,'-k'); 
 loglog(x_FL_100_L1,y_FL_100_L1,'--k','Linewidth',1); hold off
-axis([0.15,1E4,30,2050]);
+axis([0.15,32,30,2050]);
 legend({'WENO5 $i_x$','WENO5 $i_y$','WENO5 $i_z$','WENO7 $i_x$','WENO7 $i_y$','WENO7 $i_z$','Laplace','RK step'},'Location','Eastoutside','Interpreter','Latex');
 legend boxoff
-ylabel('GFLOP/s','Interpreter','Latex'); 
-xlabel('FLOPs/Byte','Interpreter','Latex');
+ylabel('(double precision) GFLOP/s','Interpreter','Latex'); 
+xlabel('(double precision) FLOPs/Byte','Interpreter','Latex');
 set(gca, 'TickLabelInterpreter','Latex');
 set(gca, 'XTick', [0.25,0.5,1,2,4,8,64,1024]);
 set(gca, 'XTickLabel',{'$\frac{1}{4}$','$\frac{1}{2}$','1','2','4','8','64','1024'}); 
 set(gca, 'YTick', [32,64,128,256,512,1024,2048]);
-grid on; %grid minor;
+grid on; grid minor; grid minor;
 axis square;
 
 % Create textbox 50%

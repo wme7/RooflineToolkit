@@ -25,7 +25,7 @@ set(0,'DefaultTextFontName','Times',...
 'DefaultAxesBox','on',...
 'defaultAxesLineWidth',1.0,...
 'DefaultFigureColor','w',...
-'DefaultLineMarkerSize',7.0)
+'DefaultLineMarkerSize',8.0)
 
 GFLOPsmax = 1236.88; % x10^9 FLOP/s
 
@@ -165,9 +165,9 @@ fig=figure; fig.PaperUnits = 'inches'; fig.PaperPosition = [0 0 8 6];
 loglog(x_kernel1,y_Kernel1,'o'); hold on
 loglog(x_kernel2,y_Kernel2,'s');
 loglog(x_kernel3,y_Kernel3,'d');
-loglog(x_kernel4,y_Kernel4,'o','MarkerFaceColor',[0.5 0.5 0.5]);
-loglog(x_kernel5,y_Kernel5,'s','MarkerFaceColor',[0.5 0.5 0.5]);
-loglog(x_kernel6,y_Kernel6,'d','MarkerFaceColor',[0.5 0.5 0.5]);
+loglog(x_kernel4,y_Kernel4,'o');%,'MarkerFaceColor',[0.5 0.5 0.5]);
+loglog(x_kernel5,y_Kernel5,'s');%,'MarkerFaceColor',[0.5 0.5 0.5]);
+loglog(x_kernel6,y_Kernel6,'d');%,'MarkerFaceColor',[0.5 0.5 0.5]);
 loglog(x_kernel7,y_Kernel7,'^');
 loglog(x_kernel8,y_Kernel8,'*');
 loglog(x_FL_10,y_FL_10,'-r'); 
@@ -213,6 +213,21 @@ annotation(fig,'textbox',...
     'FontSize',14,...
     'FitBoxToText','off',...
     'BackgroundColor',[1 1 1]);
+
+% Create text
+text('FontSize',14,'Interpreter','tex',...
+    'String','1236.9 GFLOP/s',...
+    'Position',[3.8 1400.0 0]);
+
+% Create text
+text('FontSize',14,'Rotation',52,'Interpreter','tex',...
+    'String','L1 (563.2 GB/s)',...
+    'Position',[0.25 200.45 0]);
+
+% Create text
+text('FontSize',14,'Rotation',52,'Interpreter','tex',...
+    'String','DRAM (133.8 GB/s)',...
+    'Position',[0.95 172.15 0]);
 
 % Print Figure
 print('-depsc',[pwd,'/Roofline.eps']); 

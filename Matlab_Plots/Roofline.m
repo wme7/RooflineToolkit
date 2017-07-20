@@ -176,7 +176,7 @@ loglog(x_FL_50,y_FL_50,'-r');
 loglog(x_FL_100_DRAM,y_FL_100_DRAM,'-k'); 
 loglog(x_FL_100_L1,y_FL_100_L1,'--k','Linewidth',1); hold off
 axis([0.15,32,30,2050]);
-legend({'WENO5 $i_x$','WENO5 $i_y$','WENO5 $i_z$','WENO7 $i_x$','WENO7 $i_y$','WENO7 $i_z$','Laplace','RK step'},'Location','Eastoutside','Interpreter','Latex');
+legend({'WENO5 $\mathbf{\mathit{f}}_x$','WENO5 $\mathbf{\mathit{g}}_y$','WENO5 $\mathbf{\mathit{h}}_z$','WENO7 $\mathbf{\mathit{f}}_x$','WENO7 $\mathbf{\mathit{g}}_y$','WENO7 $\mathbf{\mathit{h}}_z$','Laplacian $\mathbf{\nabla}^2$','RK step (avg.)'},'Location','Eastoutside','Interpreter','Latex');
 legend boxoff
 ylabel('(double precision) GFLOP/s','Interpreter','Latex'); 
 xlabel('(double precision) FLOPs/Byte','Interpreter','Latex');

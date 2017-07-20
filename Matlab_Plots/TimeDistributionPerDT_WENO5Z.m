@@ -4,9 +4,9 @@ clear; clc; close all;
 % setup plotting stile for figures
 set(0,'defaultTextInterpreter','latex')
 set(0,'DefaultTextFontName','Times',...
-'DefaultTextFontSize',20,...
+'DefaultTextFontSize',28,...
 'DefaultAxesFontName','Times',...
-'DefaultAxesFontSize',20,...
+'DefaultAxesFontSize',28,...
 'DefaultLineLineWidth',1.5,...
 'DefaultAxesBox','on',...
 'defaultAxesLineWidth',1.0,...
@@ -21,7 +21,7 @@ t_laplace= 5.012; % [ms]
 t_RK=4.785; % [ms]
 
 t = [t_WENO5_x,t_WENO5_y,t_WENO5_z,t_laplace,t_RK];
-p = pie(t);
+p = pie(t,[0,0,0,1,1]);
 
 percentageValues = {...
     num2str(t(1)./sum(t)*100,'%1.1f');...
@@ -38,7 +38,7 @@ percentValues = get(hText,'String'); % percent values
 for i=1:5; prcent=percentValues{i}; percentValues{i}=prcent(1:end-1); end
 
 % Combine Labels with their percentage values
-labels = {'$\textbf{\textit{f}}_x$';'$\textbf{\textit{g}}_y$';'$\textbf{\textit{h}}_z$';'$\mathbf{\nabla}^2\textbf{\textit{q}}$';'$RK_{stages}$'};
+labels = {'$\textbf{\textit{f}}_x$';'$\textbf{\textit{g}}_y$';'$\textbf{\textit{h}}_z$';'$\mathbf{\nabla}^2\textbf{\textit{q}}:$';'$RK_{stages}:$'};
 %combinedtxt = strcat(labels,percentageValues,'$\%$'); % strings and percent values
 combinedtxt = strcat(labels); % strings
 
@@ -56,7 +56,7 @@ p(i).EdgeColor = 'none';
 end
 
 hold on 
-p = pie(t);
+p = pie(t,[0,0,0,1,1]);
 
 % Extract the Percentage values
 hText = findobj(p,'Type','text'); % text object handles
@@ -75,12 +75,12 @@ p(i).EdgeColor = 'none';
 end
 
 for i = 2:2:10
-p(i).FontSize = 16;
+p(i).FontSize = 24;
 p(i).Interpreter = 'Latex';
 end
 
-colormap autumn
-% stop figue and reconfigure labels!
+colormap hot
+% stop figure and reconfigure labels in editor mode!
 
 %% Print Figure
 print('-depsc',[pwd,'/TimeDistributionPerIteration_WENO5Z.eps']); 

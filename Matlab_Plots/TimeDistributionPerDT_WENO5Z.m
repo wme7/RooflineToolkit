@@ -38,7 +38,7 @@ percentValues = get(hText,'String'); % percent values
 for i=1:5; prcent=percentValues{i}; percentValues{i}=prcent(1:end-1); end
 
 % Combine Labels with their percentage values
-labels = {'$\partial_x\mathbf{F}$';'$\partial_y\mathbf{G}$';'$\partial_z\mathbf{H}$';'$\nabla^2\mathbf{q}$';'$RK_{stages}$'};
+labels = {'$\partial_x\textbf{\textit{f}}$';'$\partial_y\textbf{\textit{g}}$';'$\partial_z\textbf{\textit{h}}$';'$\nabla^2\textbf{\textit{q}}$';'$RK_{stages}$'};
 %combinedtxt = strcat(labels,percentageValues,'$\%$'); % strings and percent values
 combinedtxt = strcat(labels); % strings
 

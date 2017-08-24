@@ -1,0 +1,776 @@
+[r1bsl@supermicro Acoustics3d_Blocking_SharedMem]$ sh run.sh 
+make: Nothing to be done for `all'.
+Process 0 -> GPU0
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 300, final time: 3e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.277066 seconds
+Data transfer(s) HtD                         :  0.000376 seconds
+Data transfer(s) DtH                         :  0.000252 seconds
+===================================================================
+Total effective GFLOPs                       :  1.616505
+===================================================================
+3D Grid Size                                 :  32 x 32 x 70
+Iterations                                   :  300 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 101, final time: 1.01e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.580012 seconds
+Data transfer(s) HtD                         :  0.001591 seconds
+Data transfer(s) DtH                         :  0.001663 seconds
+===================================================================
+Total effective GFLOPs                       :  3.368193
+===================================================================
+3D Grid Size                                 :  64 x 64 x 134
+Iterations                                   :  101 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+IC saved by Host rank 0
+pitch: 128
+gc_pitch: 128
+dt: 1e-09, iterations: 10, final time: 1e-08
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.350298 seconds
+Data transfer(s) HtD                         :  0.012060 seconds
+Data transfer(s) DtH                         :  0.011701 seconds
+===================================================================
+Total effective GFLOPs                       :  3.051847
+===================================================================
+3D Grid Size                                 :  128 x 128 x 262
+Iterations                                   :  10 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+IC saved by Host rank 0
+pitch: 256
+gc_pitch: 256
+dt: 1e-09, iterations: 3, final time: 3e-09
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  3.476893 seconds
+Data transfer(s) HtD                         :  0.136728 seconds
+Data transfer(s) DtH                         :  0.087812 seconds
+===================================================================
+Total effective GFLOPs                       :  2.811971
+===================================================================
+3D Grid Size                                 :  256 x 256 x 518
+Iterations                                   :  3 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+Process 1 -> GPU1
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 300, final time: 3e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.997974 seconds
+Data transfer(s) HtD                         :  0.000288 seconds
+Data transfer(s) DtH                         :  0.000244 seconds
+===================================================================
+Total effective GFLOPs                       :  2.068575
+===================================================================
+3D Grid Size                                 :  32 x 32 x 70
+Iterations                                   :  300 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+Process 1 -> GPU1
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 101, final time: 1.01e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.594585 seconds
+Data transfer(s) HtD                         :  0.001594 seconds
+Data transfer(s) DtH                         :  0.001448 seconds
+===================================================================
+Total effective GFLOPs                       :  8.950420
+===================================================================
+3D Grid Size                                 :  64 x 64 x 134
+Iterations                                   :  101 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+Process 1 -> GPU1
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+IC saved by Host rank 0
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+dt: 1e-09, iterations: 10, final time: 1e-08
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.390842 seconds
+Data transfer(s) HtD                         :  0.011482 seconds
+Data transfer(s) DtH                         :  0.010762 seconds
+===================================================================
+Total effective GFLOPs                       :  10.543657
+===================================================================
+3D Grid Size                                 :  128 x 128 x 262
+Iterations                                   :  10 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+Process 1 -> GPU1
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+IC saved by Host rank 0
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+dt: 1e-09, iterations: 3, final time: 3e-09
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.074410 seconds
+Data transfer(s) HtD                         :  0.089051 seconds
+Data transfer(s) DtH                         :  0.083432 seconds
+===================================================================
+Total effective GFLOPs                       :  9.099804
+===================================================================
+3D Grid Size                                 :  256 x 256 x 518
+Iterations                                   :  3 x 3 RK steps
+===================================================================
+Process 3 -> GPU3
+Process 0 -> GPU0
+Process 2 -> GPU2
+Process 1 -> GPU1
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 300, final time: 3e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.169891 seconds
+Data transfer(s) HtD                         :  0.000370 seconds
+Data transfer(s) DtH                         :  0.000242 seconds
+===================================================================
+Total effective GFLOPs                       :  1.764595
+===================================================================
+3D Grid Size                                 :  32 x 32 x 70
+Iterations                                   :  300 x 3 RK steps
+===================================================================
+Process 2 -> GPU2
+Process 3 -> GPU3
+Process 1 -> GPU1
+Process 0 -> GPU0
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 101, final time: 1.01e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.540070 seconds
+Data transfer(s) HtD                         :  0.001578 seconds
+Data transfer(s) DtH                         :  0.001752 seconds
+===================================================================
+Total effective GFLOPs                       :  9.853880
+===================================================================
+3D Grid Size                                 :  64 x 64 x 134
+Iterations                                   :  101 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+Process 2 -> GPU2
+Process 1 -> GPU1
+Process 3 -> GPU3
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+IC saved by Host rank 0
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+dt: 1e-09, iterations: 10, final time: 1e-08
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.248114 seconds
+Data transfer(s) HtD                         :  0.010038 seconds
+Data transfer(s) DtH                         :  0.013777 seconds
+===================================================================
+Total effective GFLOPs                       :  16.608906
+===================================================================
+3D Grid Size                                 :  128 x 128 x 262
+Iterations                                   :  10 x 3 RK steps
+===================================================================
+Process 2 -> GPU2
+Process 0 -> GPU0
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+Process 3 -> GPU3
+Process 1 -> GPU1
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+IC saved by Host rank 0
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+dt: 1e-09, iterations: 3, final time: 3e-09
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.623828 seconds
+Data transfer(s) HtD                         :  0.074601 seconds
+Data transfer(s) DtH                         :  0.103230 seconds
+===================================================================
+Total effective GFLOPs                       :  15.672467
+===================================================================
+3D Grid Size                                 :  256 x 256 x 518
+Iterations                                   :  3 x 3 RK steps
+===================================================================
+Process 0 -> GPU0
+Process 2 -> GPU2
+Process 1 -> GPU1
+Process 3 -> GPU3
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+IC saved by Host rank 0
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+dt: 1e-09, iterations: 1, final time: 1e-09
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.319439 seconds
+Data transfer(s) HtD                         :  0.582252 seconds
+Data transfer(s) DtH                         :  0.816397 seconds
+===================================================================
+Total effective GFLOPs                       :  19.645315
+===================================================================
+3D Grid Size                                 :  512 x 512 x 1030
+Iterations                                   :  1 x 3 RK steps
+===================================================================
+Process 2 -> GPU2
+Process 4 -> GPU4
+Process 0 -> GPU0
+Process 6 -> GPU6
+Process 7 -> GPU7
+Process 5 -> GPU5
+Process 1 -> GPU1
+Process 3 -> GPU3
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #4
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #6
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #7
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #5
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -643
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 3e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 300, final time: 3e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.080700 seconds
+Data transfer(s) HtD                         :  0.000317 seconds
+Data transfer(s) DtH                         :  0.000219 seconds
+===================================================================
+Total effective GFLOPs                       :  1.910229
+===================================================================
+3D Grid Size                                 :  32 x 32 x 70
+Iterations                                   :  300 x 3 RK steps
+===================================================================
+Process 5 -> GPU5
+Process 7 -> GPU7
+Process 1 -> GPU1
+Process 2 -> GPU2
+Process 3 -> GPU3
+Process 0 -> GPU0
+Process 6 -> GPU6
+Process 4 -> GPU4
+ECC is turned on for device #5
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #7
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #6
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+ECC is turned on for device #4
+Pmax and Pmin will start to be computed at time step -843
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-07
+
+IC saved by Host rank 0
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+pitch: 64
+gc_pitch: 64
+dt: 1e-09, iterations: 101, final time: 1.01e-07
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.622375 seconds
+Data transfer(s) HtD                         :  0.001094 seconds
+Data transfer(s) DtH                         :  0.001041 seconds
+===================================================================
+Total effective GFLOPs                       :  8.550770
+===================================================================
+3D Grid Size                                 :  64 x 64 x 134
+Iterations                                   :  101 x 3 RK steps
+===================================================================
+Process 6 -> GPU6
+Process 0 -> GPU0
+Process 2 -> GPU2
+Process 4 -> GPU4
+Process 3 -> GPU3
+Process 5 -> GPU5
+Process 7 -> GPU7
+Process 1 -> GPU1
+ECC is turned on for device #6
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #4
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #5
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #7
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -933
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-08
+
+IC saved by Host rank 0
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+pitch: 128
+gc_pitch: 128
+dt: 1e-09, iterations: 10, final time: 1e-08
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.197236 seconds
+Data transfer(s) HtD                         :  0.005811 seconds
+Data transfer(s) DtH                         :  0.007745 seconds
+===================================================================
+Total effective GFLOPs                       :  20.893257
+===================================================================
+3D Grid Size                                 :  128 x 128 x 262
+Iterations                                   :  10 x 3 RK steps
+===================================================================
+Process 2 -> GPU2
+Process 3 -> GPU3
+Process 5 -> GPU5
+Process 0 -> GPU0
+Process 4 -> GPU4
+Process 6 -> GPU6
+Process 7 -> GPU7
+Process 1 -> GPU1
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #5
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #4
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #6
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #7
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -940
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 3e-09
+
+IC saved by Host rank 0
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+pitch: 256
+gc_pitch: 256
+dt: 1e-09, iterations: 3, final time: 3e-09
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.298020 seconds
+Data transfer(s) HtD                         :  0.041523 seconds
+Data transfer(s) DtH                         :  0.052722 seconds
+===================================================================
+Total effective GFLOPs                       :  32.806274
+===================================================================
+3D Grid Size                                 :  256 x 256 x 518
+Iterations                                   :  3 x 3 RK steps
+===================================================================
+Process 5 -> GPU5
+Process 3 -> GPU3
+Process 7 -> GPU7
+Process 1 -> GPU1
+Process 4 -> GPU4
+Process 2 -> GPU2
+Process 6 -> GPU6
+Process 0 -> GPU0
+ECC is turned on for device #5
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #3
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #7
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #1
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #4
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #2
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #6
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+ECC is turned on for device #0
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 4.88759e-05, dt: 1e-09, final time: 1e-09
+
+IC saved by Host rank 0
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+pitch: 512
+gc_pitch: 512
+dt: 1e-09, iterations: 1, final time: 1e-09
+
+Solution saved in Host rank 0
+=======================NAS-3D multiGPU-WENO5Z=====================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.775523 seconds
+Data transfer(s) HtD                         :  0.298468 seconds
+Data transfer(s) DtH                         :  0.372759 seconds
+===================================================================
+Total effective GFLOPs                       :  33.423637
+===================================================================
+3D Grid Size                                 :  512 x 512 x 1030
+Iterations                                   :  1 x 3 RK steps
+===================================================================

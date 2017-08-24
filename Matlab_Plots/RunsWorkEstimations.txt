@@ -1,0 +1,187 @@
+[r1bsl@supermicro Acoustics3d]$ sh run.sh 
+make: Nothing to be done for `all'.
+Pmax and Pmin will start to be computed at time step -942
+dx: 0.0016129, dy: 0.0016129, dz: 0.000793651, dt: 1e-09, final time: 1e-09
+
+==25424== NVPROF is profiling process 25424, command: ./acoustics3d.run 0.30 0.05 0.05 0.05 32 32 64 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+pitch: 64
+Computation took 0.960000 seconds
+
+dt: 1e-09, iterations: 1e-09, final time: 0
+
+===========================NAS-3D singleGPU-WENO5Z=======================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  0.960000 seconds
+Data transfer(s) HtD                         :  0.000000 seconds
+Data transfer(s) DtH                         :  0.000000 seconds
+===================================================================
+Total effective GFLOPs                       :  0.001638
+===================================================================
+3D Grid Size                                 :  32 x 32 x 64
+Iterations                                   :  1 x 3 RK steps
+===================================================================
+==25424== Profiling application: ./acoustics3d.run 0.30 0.05 0.05 0.05 32 32 64 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+==25424== Profiling result:
+==25424== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla K80 (0)"
+	Kernel: Compute_dH_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi    23767484    23767484    23767484
+	Kernel: Compute_dF_p_(double const *, double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi    21168128    21168128    21168128
+	Kernel: Compute_dF_u_(double const *, double const *, double*, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi    20381696    20381696    20381696
+	Kernel: Compute_Laplace_Async(double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+         12                             flop_count_dp  Floating Point Operations(Double Precisi     1131624     1131624     1131624
+	Kernel: Compute_dG_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi    25290668    25290668    25290668
+	Kernel: Compute_RK_Async(double*, double*, double*, double*, double const *, double const *, double const *, double const *, double const *, double const *, double const *, double const *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi      388864     3694208     1685077
+Pmax and Pmin will start to be computed at time step -942
+dx: 0.000793651, dy: 0.000793651, dz: 0.000393701, dt: 1e-09, final time: 1e-09
+
+==25435== NVPROF is profiling process 25435, command: ./acoustics3d.run 0.30 0.05 0.05 0.05 64 64 128 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+pitch: 64
+Computation took 1.630000 seconds
+
+dt: 1e-09, iterations: 1e-09, final time: 0
+
+===========================NAS-3D singleGPU-WENO5Z=======================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  1.630000 seconds
+Data transfer(s) HtD                         :  0.000000 seconds
+Data transfer(s) DtH                         :  0.000000 seconds
+===================================================================
+Total effective GFLOPs                       :  0.007720
+===================================================================
+3D Grid Size                                 :  64 x 64 x 128
+Iterations                                   :  1 x 3 RK steps
+===================================================================
+==25435== Profiling application: ./acoustics3d.run 0.30 0.05 0.05 0.05 64 64 128 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+==25435== Profiling result:
+==25435== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla K80 (0)"
+	Kernel: Compute_dH_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi   241989340   241989340   241989340
+	Kernel: Compute_dF_p_(double const *, double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi   171859968   171859968   171859968
+	Kernel: Compute_dF_u_(double const *, double const *, double*, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi   165470208   165470208   165470208
+	Kernel: Compute_Laplace_Async(double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+         12                             flop_count_dp  Floating Point Operations(Double Precisi    11444328    11444328    11444328
+	Kernel: Compute_dG_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi   248785084   248785084   248785084
+	Kernel: Compute_RK_Async(double*, double*, double*, double*, double const *, double const *, double const *, double const *, double const *, double const *, double const *, double const *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi     3628800    34473600    15724800
+Pmax and Pmin will start to be computed at time step -942
+dx: 0.000393701, dy: 0.000393701, dz: 0.000196078, dt: 1e-09, final time: 1e-09
+
+==25444== NVPROF is profiling process 25444, command: ./acoustics3d.run 0.30 0.05 0.05 0.05 128 128 256 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+pitch: 128
+Computation took 6.550000 seconds
+
+dt: 1e-09, iterations: 1e-09, final time: 0
+
+===========================NAS-3D singleGPU-WENO5Z=======================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  6.550000 seconds
+Data transfer(s) HtD                         :  0.030000 seconds
+Data transfer(s) DtH                         :  0.020000 seconds
+===================================================================
+Total effective GFLOPs                       :  0.015368
+===================================================================
+3D Grid Size                                 :  128 x 128 x 256
+Iterations                                   :  1 x 3 RK steps
+===================================================================
+==25444== Profiling application: ./acoustics3d.run 0.30 0.05 0.05 0.05 128 128 256 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+==25444== Profiling result:
+==25444== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla K80 (0)"
+	Kernel: Compute_dH_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  2165428508  2165428508  2165428508
+	Kernel: Compute_dF_p_(double const *, double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  1384939520  1384939520  1384939520
+	Kernel: Compute_dF_u_(double const *, double const *, double*, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  1333428224  1333428224  1333428224
+	Kernel: Compute_Laplace_Async(double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+         12                             flop_count_dp  Floating Point Operations(Double Precisi   102074472   102074472   102074472
+	Kernel: Compute_dG_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  2194017500  2194017500  2194017500
+	Kernel: Compute_RK_Async(double*, double*, double*, double*, double const *, double const *, double const *, double const *, double const *, double const *, double const *, double const *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi    31244032   296818304   135390805
+Pmax and Pmin will start to be computed at time step -942
+dx: 0.000196078, dy: 0.000196078, dz: 9.78474e-05, dt: 1e-09, final time: 1e-09
+
+==25467== NVPROF is profiling process 25467, command: ./acoustics3d.run 0.30 0.05 0.05 0.05 256 256 512 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+pitch: 256
+Computation took 47.710000 seconds
+
+dt: 1e-09, iterations: 1e-09, final time: 0
+
+===========================NAS-3D singleGPU-WENO5Z=======================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  47.710000 seconds
+Data transfer(s) HtD                         :  0.140000 seconds
+Data transfer(s) DtH                         :  0.200000 seconds
+===================================================================
+Total effective GFLOPs                       :  0.016879
+===================================================================
+3D Grid Size                                 :  256 x 256 x 512
+Iterations                                   :  1 x 3 RK steps
+===================================================================
+==25467== Profiling application: ./acoustics3d.run 0.30 0.05 0.05 0.05 256 256 512 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+==25467== Profiling result:
+==25467== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla K80 (0)"
+	Kernel: Compute_dH_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  1.8287e+10  1.8287e+10  1.8287e+10
+	Kernel: Compute_dF_p_(double const *, double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  1.1120e+10  1.1120e+10  1.1120e+10
+	Kernel: Compute_dF_u_(double const *, double const *, double*, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  1.0706e+10  1.0706e+10  1.0706e+10
+	Kernel: Compute_Laplace_Async(double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+         12                             flop_count_dp  Floating Point Operations(Double Precisi   860625000   860625000   860625000
+	Kernel: Compute_dG_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  1.8404e+10  1.8404e+10  1.8404e+10
+	Kernel: Compute_RK_Async(double*, double*, double*, double*, double const *, double const *, double const *, double const *, double const *, double const *, double const *, double const *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi   259096320  2461415040  1122750720
+Pmax and Pmin will start to be computed at time step -942
+dx: 9.78474e-05, dy: 9.78474e-05, dz: 0.000196078, dt: 1e-09, final time: 1e-09
+
+==25485== NVPROF is profiling process 25485, command: ./acoustics3d.run 0.30 0.05 0.05 0.05 512 512 256 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+pitch: 512
+Computation took 94.970000 seconds
+
+dt: 1e-09, iterations: 1e-09, final time: 0
+
+===========================NAS-3D singleGPU-WENO5Z=======================
+Optimization                                 :  Blocking+SharedMem
+Kernel time ex. data transfers               :  94.970000 seconds
+Data transfer(s) HtD                         :  0.280000 seconds
+Data transfer(s) DtH                         :  0.410000 seconds
+===================================================================
+Total effective GFLOPs                       :  0.016959
+===================================================================
+3D Grid Size                                 :  512 x 512 x 256
+Iterations                                   :  1 x 3 RK steps
+===================================================================
+==25485== Profiling application: ./acoustics3d.run 0.30 0.05 0.05 0.05 512 512 256 1500.00 1000.00 0.01000000 0.01000000 4.50 1000000.0 1060000.0 0.0000000010 1 8 8 8
+==25485== Profiling result:
+==25485== Metric result:
+Invocations                               Metric Name                        Metric Description         Min         Max         Avg
+Device "Tesla K80 (0)"
+	Kernel: Compute_dH_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  3.7250e+10  3.7250e+10  3.7250e+10
+	Kernel: Compute_dF_p_(double const *, double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  2.2280e+10  2.2280e+10  2.2280e+10
+	Kernel: Compute_dF_u_(double const *, double const *, double*, double, double, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  2.1451e+10  2.1451e+10  2.1451e+10
+	Kernel: Compute_Laplace_Async(double const *, double*, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)
+         12                             flop_count_dp  Floating Point Operations(Double Precisi  1755894888  1755894888  1755894888
+	Kernel: Compute_dG_Async(double const *, double const *, double*, double*, double, double, double, double, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi  3.7013e+10  3.7013e+10  3.7013e+10
+	Kernel: Compute_RK_Async(double*, double*, double*, double*, double const *, double const *, double const *, double const *, double const *, double const *, double const *, double const *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, double)
+          3                             flop_count_dp  Floating Point Operations(Double Precisi   524386048  4981667456  2272339541

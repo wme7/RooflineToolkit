@@ -14,11 +14,11 @@ set(0,'DefaultTextFontName','Times',...
 'DefaultLineMarkerSize',7.0)
 
 % Execution Time
-t_WENO5_x= 9.945+9.905; % [ms]
-t_WENO5_y= 9.757+8.811; % [ms]
-t_WENO5_z=10.408+9.398; % [ms]
-t_laplace= 5.012; % [ms]
-t_RK=4.785; % [ms]
+t_WENO5_x= 8.60+8.56; % [ms]
+t_WENO5_y= 14.66; % [ms]
+t_WENO5_z= 14.56; % [ms]
+t_laplace= 5.2969; % [ms]
+t_RK=5.5779; % [ms]
 
 t = [t_WENO5_x,t_WENO5_y,t_WENO5_z,t_laplace,t_RK];
 p = pie(t,[0,0,0,1,1]);

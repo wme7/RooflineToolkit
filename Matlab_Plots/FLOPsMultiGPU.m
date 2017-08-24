@@ -26,10 +26,24 @@ set(0,'DefaultTextFontName','Times',...
 'defaultAxesLineWidth',0.5,...
 'DefaultFigureColor','w',...
 'DefaultLineMarkerSize',3.0)
-colormap parula;
 
 % Constants
 GFLOP = 1/1E9; % FLOPs
+
+% Iterations
+% T = [XS , S , M , L , XL]; 
+iter= [300,101, 10, 3 , 1 ];
+
+% -------------------------------%
+% CPU time of OMP implementation %
+% -------------------------------%
+T_XS= 6.83;
+T_S_=19.24;
+T_M_= 9.19;
+T_L_=15.19;
+T_XL=76.92;
+T_OMP = [T_XS,T_S_,T_M_,T_L_,T_XL]./iter;
+T_OMP = [T_OMP;,T_OMP;T_OMP;T_OMP]';
 
 % ---------------------------%
 % FLOPS per single iteration %
@@ -45,13 +59,20 @@ FLOPs = [FLOPs_XS,FLOPs_S_,FLOPs_M_,FLOPs_L_,FLOPs_XL];
 % Benchmarks Test Cases %
 % ----------------------%
 % Time per iteration
-% T = [XS , S , M , L , XL]; 
-iter= [300,101, 10, 3 , 1 ];
 T_1GPU = [1.304617,1.579873,1.348921,3.476893, inf ]./iter;
 T_2GPU = [0.972122,0.593772,0.389932,1.074410, inf ]./iter;
 T_4GPU = [1.151733,0.552446,0.284670,0.623828,1.311819]./iter;
 T_8GPU = [1.108511,0.620046,0.197519,0.398020,0.772124]./iter;
 T = [T_1GPU;T_2GPU;T_4GPU;T_8GPU]';
+fprintf('Time per iteration:\n');
+disp(T);
+
+% ------------------------------%
+% Speed up wrt to i7-OMP solver %
+% ------------------------------%
+SpeedUp = T_OMP./T;
+fprintf('Speed Up:\n');
+disp(SpeedUp);
 
 % ----------------------%
 %     Compute FLOP/s    %

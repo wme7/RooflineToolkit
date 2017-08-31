@@ -43,7 +43,7 @@ T_M_= 9.19;
 T_L_=15.19;
 T_XL=76.92;
 T_OMP = [T_XS,T_S_,T_M_,T_L_,T_XL]./iter;
-T_OMP = [T_OMP;,T_OMP;T_OMP;T_OMP]';
+T_OMP = [T_OMP;T_OMP;T_OMP;T_OMP]';
 
 % ---------------------------%
 % FLOPS per single iteration %

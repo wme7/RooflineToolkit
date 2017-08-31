@@ -64,7 +64,7 @@ Itotal=0;
 
 % WENO5_x Operator
 % [ShMem, BlokSweep, PlaneSweep]
-T = [2*3.1,10.32,8.467]*ms;
+T = [2*2.4,10.32,8.467]*ms;
 Qw= [42.47,61.17,56.066];
 Qr= [97.43,66.78,25.546];
 W = [2*6.67E8,10.7E8,9.8E8];
@@ -82,7 +82,7 @@ Itotal = Itotal + I(1);
 
 % WENO5_y Operator
 % [ShMem, BlokSweep, PlaneSweep]
-T = [2*3.52,4.77,5.372]*ms;
+T = [2*3.52,3.1,5.372]*ms;
 Qw= [38.76,34.28,12.59];
 Qr= [103.96,102.70,7.825];
 W = [2*6.67E8,10.7E8,9.8E8];
@@ -100,7 +100,7 @@ Itotal = Itotal + I(2);
 
 % WENO5_z Operator
 % [ShMem, BlokSweep, PlaneSweep]
-T = [2*3.59,4.87,5.295]*ms;
+T = [2*3.59,3.0,5.295]*ms;
 Qw= [37.34,34.28,12.726];
 Qr= [103.57,102.93,7.7555];
 W = [2*6.67E8,10.7E8,9.8E8];
@@ -117,7 +117,7 @@ Wtotal = Wtotal + W(2);
 Itotal = Itotal + I(2);
 
 % Laplace Operator
-T = 4*[471,441,560]*ms*ms;
+T = 4*[471,438,560]*ms*ms;
 Qw= [81.54,90.5,94.81];
 Qr= [38.32,40.8,32.93];
 W = 4*[5E6,5E6, 4.9E6];
@@ -164,13 +164,13 @@ y_KernelCODE=P;
 % Plot Figure
 fig=figure; fig.PaperUnits = 'inches'; fig.PaperPosition = [0 0 8 6];
 loglog(x_kernelf(3),y_Kernelf(3),'o','Color',blue); hold on
-loglog(x_kernelg(3),y_Kernelg(3),'o','Color',orange);
-loglog(x_kernelh(3),y_Kernelh(3),'o','Color',yellow);
-loglog(x_kernelf(2),y_Kernelf(2),'s','Color',blue);
+loglog(x_kernelg(3),y_Kernelg(3),'s','Color',blue);
+loglog(x_kernelh(3),y_Kernelh(3),'d','Color',blue);
+loglog(x_kernelf(2),y_Kernelf(2),'o','Color',orange);
 loglog(x_kernelg(2),y_Kernelg(2),'s','Color',orange);
-loglog(x_kernelh(2),y_Kernelh(2),'s','Color',yellow);
-loglog(x_kernelf(1),y_Kernelf(1),'d','Color',blue);
-loglog(x_kernelg(1),y_Kernelg(1),'d','Color',orange);
+loglog(x_kernelh(2),y_Kernelh(2),'d','Color',orange);
+loglog(x_kernelf(1),y_Kernelf(1),'o','Color',yellow);
+loglog(x_kernelg(1),y_Kernelg(1),'s','Color',yellow);
 loglog(x_kernelh(1),y_Kernelh(1),'d','Color',yellow);
 loglog(x_kernelL(3),y_KernelL(3),'^','Color',blue);
 loglog(x_kernelL(2),y_KernelL(2),'^','Color',orange);

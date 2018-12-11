@@ -55,7 +55,7 @@ x_FL_10=[0.6,1E4];
 y_FL_10=[GFLOPsnominal/10,GFLOPsnominal/10];
 
 GFlop = 1E9;
-GByte = 1E6;
+GByte = 1024^3;
 ms = 1E-3; % [1ms = 1/1000s]
 
 % Kernels Measurements
@@ -68,7 +68,7 @@ Qr= [25,    65.502];
 W = [6.5e8, 175e8];
 
 P = (W./T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W./Q;
 
 x_kernel1=I;
@@ -82,7 +82,7 @@ Qr= [24,    8.942];
 W = [6.5e8, 175e8];
 
 P = (W./T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W./Q;
 
 x_kernel2=I;
@@ -96,7 +96,7 @@ Qr= [25,    8.190];
 W = [6.5E8, 170e8];
 
 P = (W./T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W./Q;
 
 x_kernel3=I;
@@ -110,7 +110,7 @@ Qr= [35];
 W = [1.1E9];
 
 P = (W./T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W./Q;
 
 x_kernel4=I;
@@ -124,7 +124,7 @@ Qr= [35];
 W = [1.1E9];
 
 P = (W./T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W./Q;
 
 x_kernel5=I;
@@ -138,7 +138,7 @@ Qr= [35];
 W = [1.1E9];
 
 P = (W./T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W./Q;
 
 x_kernel6=I;
@@ -151,7 +151,7 @@ Qr= [85,    88.859];
 W = [4.7E7, 1.1E8];
 
 P = (W/T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W/Q;
 
 x_kernel7=I;
@@ -164,7 +164,7 @@ Qr= [120,   120];
 W = [3.6E6, 1.5E8];
 
 P = (W/T)/GFlop;
-Q = (Qw+Qr)*GByte;
+Q = (Qw+Qr)*GByte.*T;
 I = W/Q;
 
 x_kernel8=I;

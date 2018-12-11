@@ -7,8 +7,8 @@ ERT_DRIVER  driver1
 ERT_KERNEL  kernel1
 
 ERT_GPU         True
-ERT_GPU_CFLAGS  -I/usr/local/cuda-7.5/include
-ERT_GPU_LDFLAGS -L/usr/local/cuda-7.5/lib64 
+ERT_GPU_CFLAGS  -I/usr/local/cuda-9.2/include
+ERT_GPU_LDFLAGS -L/usr/local/cuda-9.2/lib64 
 
 ERT_FLOPS   1,2,4,8,16,32,64,128,256
 ERT_ALIGN   32
@@ -17,7 +17,7 @@ ERT_CC      nvcc
 ERT_CFLAGS  -O3 -m64 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -lcudart -lcuda
 
 ERT_LD      nvcc
-ERT_LDFLAGS -L/usr/local/cuda-7.5/lib64 
+ERT_LDFLAGS -L/usr/local/cuda-9.2/lib64 
 ERT_LDLIBS  
 
 ERT_RUN     ./ERT_CODE
